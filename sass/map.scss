@@ -1,0 +1,38 @@
+/*map*/ 
+.map{
+	padding: 4em 0;
+	background:transparent url('../img/bg/office_bg.jpg') left top no-repeat;
+	background-size: cover;
+	.container{
+		height: 100%;
+	}
+	.title{
+		margin-bottom: 4em;
+	}
+}
+.map-block{
+	height: 31.25em;
+	background-color: var(--green);
+	padding: 3px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.office-img{
+	width: 31.875em;
+	height: 100%;
+	border-top: 10px solid var(--green);
+	border-bottom: 10px solid var(--green);
+	img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.map-content{
+	width: calc(100% - 31.875em);
+	height: 100%;
+	iframe{
+		width: 100% !important;
+		height: 100% !important;
+	}
+}

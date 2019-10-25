@@ -1,0 +1,90 @@
+/*warranty*/ 
+.warranty{
+	padding: 9.2em 0 11.5em;
+	background:transparent url('../img/bg/bg-1.jpg') center 100% no-repeat;
+	background-size: cover;
+}
+.warranty__left{
+	.h2{
+		margin-bottom: .75em;
+	}
+}
+.warranty__descr{
+	font-size: 1.5rem;
+	font-weight: 300;
+	line-height: 1.5;
+	margin-bottom: 1.5em;
+}
+.warranty__right{
+	padding-right: 1.25em;
+	position: relative;
+	transform: translateY(1em);
+	// &::before{
+	// 	content: '';
+	// 	width: 28.125em;
+	//  	height: 28.125em;
+	//  	background:transparent url('../img/bg/circles.png') left top no-repeat;
+	//  	background-size: contain;
+	//  	position: absolute;
+	//  	top: 50%;
+	//  	left: 42%;
+	//  	transform: translate(-50%, -50%);
+	// }
+}
+.wave{
+	position: absolute;
+	width: 28.125em;
+	height: 28.125em;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	span{
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 50%;
+		border: 1px solid var(--red);
+		
+		&:first-child{
+			animation: wave infinite 6s linear;
+		}
+		&:nth-child(2){
+			animation: wave infinite 6s linear;
+			animation-delay: 4s;
+			border-width: 3px;
+		}
+		&:last-child{
+			animation: wave infinite 6s linear;
+			animation-delay: 1s;
+			border-color: var(--green);
+		}
+	}
+}
+.warranty__right__title{
+	font-size: 4.0625rem;
+	font-weight: 500;
+	.percent{
+		display: block;
+		font-size: 2.2769em;
+		font-weight: 900;
+		color: var(--green);
+	}
+}
+
+@keyframes wave{
+	0%{
+		transform: scale(0);
+		opacity: 0;
+	}
+	75%{
+		opacity: 1;
+	}
+	100%{
+		transform: scale(1.2);
+		opacity: 0;
+		filter: blur(3px);
+	}
+}

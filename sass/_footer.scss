@@ -1,0 +1,32 @@
+/*Footer*/ 
+.footer{
+	padding: 2em 0;
+}
+.footer__left{
+	address{
+		display: block;
+		margin-bottom: 1em;
+	}
+}
+.footer__right{
+	text-align: right;
+}
+.social{
+	li{
+		margin-left: 3em;
+		margin-bottom: 1.25em;
+		a{
+			display: flex;
+			align-items: center;
+			.text{
+				margin-left: 1.25em;
+			}
+			&:hover{
+				color: var(--green);
+			}
+		}
+	}
+}
+.copyright{
+	color: rgba(#000, .66);
+}

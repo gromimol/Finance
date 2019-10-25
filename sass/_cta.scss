@@ -1,0 +1,27 @@
+/*cta*/
+.cta{
+	padding: 4.0625em 0;
+	background:transparent url('../img/bg/bg-2.jpg') 100% top no-repeat;
+	background-size: cover;
+	position: relative;
+	&::after{
+		content: '';
+		width: 21.875em;
+		height: 100%;
+		background:transparent url('../img/bg/decor.png') 0 100% no-repeat;
+		background-size: contain;
+
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	.title{
+		margin-bottom: 1.8em;
+	}
+} 
+.cta-title{
+	font-size: 3.75rem;
+	text-transform: uppercase;
+	margin-bottom: .8em;
+	font-weight: 900;
+}

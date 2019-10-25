@@ -1,0 +1,40 @@
+/*consider*/ 
+.consider{
+	padding-top: 5.625em;
+	background:transparent url('../img/bg/consider_bg.jpg') left top no-repeat;
+	background-size: cover;
+	.title{
+		margin-bottom: 3.75em;
+	}
+}
+.consider__list{
+	justify-content: space-around;
+	li{
+		width: 25%;
+		margin-bottom: 4em;
+	}
+}
+.consider__item{
+	text-align: center;
+}
+.consider__ico{
+	height: 6.25em;
+	margin-bottom: 1.25em;
+	img{
+		max-height: 100%;
+
+	}
+}
+
+.consider__item__title{
+	font-size: 1.5rem;
+	line-height: 1.2;
+}
+
+
+
+
+
+
+
+

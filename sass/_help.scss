@@ -1,0 +1,21 @@
+/*help*/ 
+.help{
+	padding: 6em 0;
+	background:transparent url('../img/bg/help_bg.jpg') left top no-repeat;
+	background-size: cover;
+}
+.help__descr{
+	width: calc(100% - 22.5em);
+	padding-right: 15px;
+	.h3{
+		margin-bottom: 1em;
+	}
+}
+.help__descr__text{
+	font-size: 1.5rem;
+	line-height: 1.3;
+	margin-bottom: 1.75em;
+}
+.help__ico{
+	width: 22.5em;
+}
