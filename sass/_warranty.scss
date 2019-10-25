@@ -47,18 +47,19 @@
 		left: 0;
 		border-radius: 50%;
 		border: 1px solid var(--red);
-		
 		&:first-child{
 			animation: wave infinite 6s linear;
+			
 		}
 		&:nth-child(2){
 			animation: wave infinite 6s linear;
+			opacity: 0;
 			animation-delay: 4s;
-			border-width: 3px;
 		}
 		&:last-child{
 			animation: wave infinite 6s linear;
 			animation-delay: 1s;
+			opacity: 0;
 			border-color: var(--green);
 		}
 	}
