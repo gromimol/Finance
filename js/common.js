@@ -96,6 +96,15 @@ $(document).ready(function () {
 		$('.callback').removeClass('active');
 	});
 
+	// Анимация заголовка
+	$('.animation-title').typeIt({
+		strings: ["выгодно", "интересно", "безопасно", "удобно"],
+		speed: 100,
+		breakLines: false,
+        loop: true
+
+	});
+
 
 
 })

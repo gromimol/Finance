@@ -265,6 +265,11 @@ a {
   .arrow:hover {
     border-color: #231f20; }
 
+.animation-title {
+  position: relative;
+  display: inline-block;
+  color: var(--green); }
+
 /* Firefox 19+ */
 /* Firefox 18- */
 /* хром, сафари */

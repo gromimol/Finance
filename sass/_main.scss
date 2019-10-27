@@ -162,6 +162,12 @@ a{
 	}
 }
 
+.animation-title{
+	position: relative;
+	display: inline-block;
+	color: var(--green);
+}
+
 ::-webkit-input-placeholder {  }
 ::-moz-placeholder          {  } /* Firefox 19+ */
 :-moz-placeholder           {  } /* Firefox 18- */
