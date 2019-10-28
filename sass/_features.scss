@@ -40,6 +40,10 @@
 .features__title{
 	font-size: 1.875rem;
 	line-height: 1.2;
+	small{
+		display: block;
+		font-size: .5em;
+	}
 }
 .features__descr{
 	position: absolute;
