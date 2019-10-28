@@ -728,9 +728,6 @@ a {
 .features__title {
   font-size: 1.875rem;
   line-height: 1.2; }
-  .features__title small {
-    display: block;
-    font-size: .5em; }
 
 .features__descr {
   position: absolute;
@@ -2061,9 +2058,6 @@ b {
 
   .features__title {
     font-size: 18px; }
-
-  .features__title small {
-    font-size: .75em; }
 
   .h3 {
     font-size: 3rem; }
