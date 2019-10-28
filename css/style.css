@@ -2214,7 +2214,10 @@ b {
     padding: 50px 0; }
 
   .offer-slider-container {
-    padding-right: 0; } }
+    padding-right: 0; }
+
+  .animation-title {
+    display: block; } }
 /*767*/
 @media (max-width: 568px) {
   .warranty__right__title {
