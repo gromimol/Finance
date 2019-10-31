@@ -1,4 +1,10 @@
-/*media*/ 
+/*media*/
+@media(max-width: 1700px){
+	.lk-page{
+		background-size: 10%;
+	}
+} 
+/*1700*/ 
 @media(max-width: 1360px){
 	html{
 		font-size: 1.1vw;
@@ -25,7 +31,7 @@
 		height: 30px;
 		display: block;
 		margin: 0 auto 15px;
-		background:transparent url('../img/icons/close.png') left top no-repeat;
+		background:transparent url('../images/icons/close.png') left top no-repeat;
 		background-size: contain;
 	}
 	.cta{
@@ -35,6 +41,37 @@
 	}
 	.act__item{
 		padding-left: 20px;
+	}
+	.registration__title{
+		font-size: 24px;
+	}
+	.registration__subtitle{
+		font-size: 18px;
+	}
+	.question,
+	.enter{
+		font-size: 16px;
+	}
+	.registration-block .btn-container{
+		margin-bottom: 30px;
+	}
+	.registration-block .btn-container .btn{
+		margin-bottom: 1.5em;
+	}
+	.lk-page .logo-container .logo img{
+		width: 200px;
+	}
+	.lk-page{
+		min-height: 100%;
+	}
+	.lk-page .logo-container{
+		margin: 30px 0;
+	}
+	.manager-row{
+		.checkbox{
+			margin-bottom: 5px;
+			margin-right: 15px;
+		}
 	}
 }
 /*1360*/ 
@@ -98,6 +135,22 @@
 	}
 	.status__slider__item__content .text{
 		font-size: 18px;
+	}
+	.lk-menu{
+		width: 200px;
+	}
+	.lk-content{
+		width: calc(100% - 200px);
+		padding: 20px 15px;
+	}
+	.lk-menu li a{
+		padding: 15px 10px 15px 20px;
+	}
+	.lk-manager__title{
+		font-size: 20px;
+		br{
+			display: none;
+		}
 	}
 }
 /*1024*/ 
@@ -297,6 +350,75 @@
 	.footer{
 		font-size: 12px;
 	}
+	.registration-block .features-lk__list li{
+		width: 100%;
+	}
+	.registration-block .features-lk__item::after{
+		width: 150px;
+	}
+	.registration-block .features-lk__list{
+		margin-top: 60px;
+	}
+	.lk-page.flex{
+		display: block;
+	}
+	.lk-cabinet{
+		position: relative;
+	}
+	.lk-menu{
+		position: absolute;
+		width: 240px;
+		left: 0;
+		left: 0;
+		height: 100%;
+		transform: translateX(-120%);
+		visibility: hidden;
+		transition: all .3s;
+		z-index: 10;
+
+	}
+	.lk-menu.active{
+		transform: translateX(0);
+		visibility: visible;
+	}
+	.lk-content{
+		width: 100%;
+	}
+	.manager__title{
+		font-size: 16px;
+	}
+	.lk-page{
+		.input-grey{
+			height: 60px;
+			padding-left: 20px;
+		}
+	}
+	.select-wrapper__title,
+	.select .placeholder{
+		font-size: 14px;
+	}
+	.select{
+		padding-left: 6px;
+	}
+	.select .placeholder{
+		padding-right: 10px;
+	}
+	.lk-payment-table .payment__item:last-child{
+		min-width: 200px;
+	}
+	.lk-payment-table{
+		overflow-x: auto;
+	}
+	.payment-table-head,
+	.payment-table-body{
+		min-width: 700px;
+	}
+	.lk-payment__title{
+		margin-bottom: 30px;
+	}
+	.lk-online__title{
+		font-size: 24px;
+	}
 }
 /*920*/ 
 
@@ -307,7 +429,7 @@
 	.header .logo{
 		width: 38px;
 		height: 44px;
-		background:transparent url('../img/logo-mob.png') left top no-repeat;
+		background:transparent url('../images/logo-mob.png') left top no-repeat;
 		background-size: contain;
 		img{
 			display: none;
@@ -528,6 +650,62 @@
 	.animation-title{
 		display: block;
 	}
+	.form{
+		padding: 20px 30px;
+		border-width: 5px;
+		&::before{
+			width: 45px;
+			height: 34px;
+			
+		}
+	}
+	.input-grey{
+		height: 50px;
+	}
+	.lk-page .logo-container{
+		margin-bottom: 70px;
+	}
+	.form__title{
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	.manager-row{
+		margin-bottom: 20px;
+		flex-wrap: wrap;
+		.input-wrapper,
+		.manager__item {
+			width: 100%;
+		}
+	}
+	.lk-page .select-wrapper{
+		margin-bottom: 20px;
+	}
+	.lk-page{
+		.header__user__btn .text{
+			font-size: 10px;
+			margin-left: 10px;
+		}
+		.logo img{
+			width: 150px;
+		}
+	}
+	.lk-online__title{
+		font-size: 20px;
+	}
+	.report__item .report__status{
+		width: 33%;
+		min-width: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.lk-menu{
+		.header__phone{
+			display: flex;
+			.ico{
+				display: none;
+			}
+		}
+	}
 }
 /*767*/ 
 @media(max-width: 568px){
@@ -666,6 +844,28 @@
 	.recomend{
 		padding: 50px 0;
 	}
+	.form{
+		.input-wrapper{
+			margin-bottom: 20px;
+		}
+	}
+	.form-row{
+		flex-direction: column-reverse;
+		.forgot{
+			margin-top: 20px;
+		}
+	}
+	.report__item{
+		flex-wrap: wrap;
+		.report__title{
+			text-align: center;
+		}
+		.report__status{
+			width: 100%;
+			padding: 20px 10px;
+		}
+	}
+	
 }
 /*568*/ 
 
@@ -706,6 +906,32 @@
 			margin-top: 10px;
 		}
 	}
+	.form{
+		width: 95%;
+		padding: 20px 15px;
+	}
+	.input-grey{
+		padding-left: 15px;
+	}
+	.lk-page .logo-container{
+		img{
+			width: 200px;
+		}
+	}
+	.report-btn,
+	.delete{
+		width: 30px;
+		height: 30px;
+		.ico{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		svg{
+			width: 75%;
+			height: 75%;
+		}
+	}
 }
 /*480*/ 
 
@@ -726,6 +952,7 @@
 	.popup{
 		padding: 20px 10px;
 	}
+
 }
 /*400px*/ 
 

@@ -16,7 +16,7 @@ $(document).ready(function () {
 	// mob menu
 	$('.mob-btn').on('click',function () {
 		$(this).toggleClass('active');
-		$('.menu').toggleClass('active');
+		$('.menu, .lk-menu').toggleClass('active');
 	});
 
 	// Подсказка
@@ -72,13 +72,26 @@ $(document).ready(function () {
 		$( "#slider-range" ).slider({
 			range: "min",
 			min: 1000,
-			max: 1000000,
+			max: 30000000,
 			value: 30000,
 			slide: function( event, ui ) {
 				$( "#amount" ).val( ui.value );
 			}
 		});
 		$( "#amount" ).val( $( "#slider-range" ).slider( "value") );
+	} );
+
+	$( function() {
+		$( "#slider-range2" ).slider({
+			range: "min",
+			min: 1,
+			max: 30,
+			value: 1,
+			slide: function( event, ui ) {
+				$( "#amount2" ).val( ui.value );
+			}
+		});
+		$( "#amount2" ).val( $( "#slider-range2" ).slider( "value") );
 	} );
 
 	// callback
@@ -103,6 +116,25 @@ $(document).ready(function () {
 		breakLines: false,
         loop: true
 
+	});
+
+	// ПсевдоСелект
+	$('.select').on('click','.placeholder',function(){
+		var parent = $(this).closest('.select');
+		if ( ! parent.hasClass('is-open')){
+
+			$(this).parents('.input-wrapper').addClass('focus');
+			parent.addClass('is-open');
+			$('.select.is-open').not(parent).removeClass('is-open');
+		}else{
+			parent.removeClass('is-open');
+			$(this).parents('.input-wrapper').removeClass('focus');
+		}
+	}).on('click','ul>li',function(){
+		var parent = $(this).closest('.select');
+		$(parent).parents('.input-wrapper').removeClass('focus');
+		parent.removeClass('is-open').find('.placeholder .text').text( $(this).text() );
+		parent.find('input[type=hidden]').attr('value', $(this).attr('data-value') );
 	});
 
 

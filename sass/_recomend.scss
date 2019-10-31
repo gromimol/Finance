@@ -1,7 +1,7 @@
 /*recomend*/ 
 .recomend{
 	padding: 6em 0;
-	background:transparent url('../img/bg/recomend_bg.jpg') left top no-repeat;
+	background:transparent url('../images/bg/recomend_bg.jpg') left top no-repeat;
 	background-size: cover;
 	.title{
 		margin-bottom: 4em;
@@ -22,14 +22,14 @@
 	height: 6.666em;
 	padding-top: 17px;
 	line-height: 2;
-	background:transparent url('../img/bg/border.png') 100% top no-repeat;
+	background:transparent url('../images/bg/border.png') 100% top no-repeat;
 	background-size: 92% 100%;
 	position: relative;
 	&::before{
 		content: '';
 		width: 1.22em;
 		height: 1.22em;
-		background:transparent url('../img/icons/arrow_green.png') left top no-repeat;
+		background:transparent url('../images/icons/arrow_green.png') left top no-repeat;
 		background-size: contain;
 		position: absolute;
 		top: -.3em;

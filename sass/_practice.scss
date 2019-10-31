@@ -1,7 +1,7 @@
 /*practice*/ 
 .practice{
 	padding: 6em 0;
-	background:#fff url('../img/bg/decor-2.png') 100% 100% no-repeat;
+	background:#fff url('../images/bg/decor-2.png') 100% 100% no-repeat;
 }
 .practice-slider{
 	.arrow{
@@ -11,12 +11,12 @@
 		z-index: 2;
 	}
 	.prev-arrow{
-		background-image: url('../img/icons/arrow_left.png');
+		background-image: url('../images/icons/arrow_left.png');
 		background-position: 18px center;
 		right: 75px;
 	}
 	.next-arrow{
-		background-image: url('../img/icons/arrow_right.png');
+		background-image: url('../images/icons/arrow_right.png');
 		background-position: 22px center;
 		right: 0;
 	}
