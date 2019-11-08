@@ -5,6 +5,27 @@
 		margin-bottom: 4em;
 	}
 }
+
+.offer__list{
+	font-size: 1rem;
+	li{
+		font-size: 2em;
+		display: flex;
+		align-items: center;
+		&::before{
+			content: '+';
+			color: #007155;
+			font-size: 1em;
+			margin-right: .4em;
+		}
+		&:not(:last-child){
+			margin-bottom: .75em;
+		}
+		span{
+			padding: 0 .3em;
+		}
+	}
+}
 .offer__slider{
 	.slick-list{
 		overflow: visible;
