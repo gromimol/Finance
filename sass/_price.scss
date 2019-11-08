@@ -12,10 +12,17 @@
 b{
 	font-weight: 700;
 }
+.price__total{
+	max-width: 845px;
+	margin: 0 auto 4.0625rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-align: right;
+}
 .price__list{
 	border: 5px solid var(--green);
 	max-width: 845px;
-	margin: 4.0625em auto 4.0625em;
+	margin: 4.0625em auto 2.5em;
 	background-color: #fff;
 	padding: 1em 2em;
 	position: relative;
@@ -76,6 +83,9 @@ b{
 .price__notice{
 	max-width: 940px;
 	margin: 0 auto;
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	line-height: 1.3;
+	&:not(:last-child){
+		margin-bottom: 2.5em;
+	}
 }

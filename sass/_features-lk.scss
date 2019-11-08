@@ -1,7 +1,7 @@
 /*features-lk*/ 
 .features-lk{
 	background-color: #f6f7fa;
-	padding: 6.25em 0 0;
+	padding: 6.25em 0;
 	.title{
 		margin-bottom: 6.25em;
 	}
@@ -58,5 +58,17 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 1;
+	}
+}
+
+.notice{
+	text-align: center;
+	font-size: 1.5rem;
+}
+.red-link{
+	color: var(--red);
+	text-decoration: underline;
+	b{
+		font-weight: 700;
 	}
 }
