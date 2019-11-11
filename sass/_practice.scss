@@ -23,6 +23,12 @@
 }
 .practice__photo{
 	width: 25.625em;
+	img{
+		max-height: 21.875em;
+		width: 100%;
+		object-fit: cover;
+		object-position: 50% 0;
+	}
 }
 .practice__descr{
 	width: calc(100% - 25.625em);
@@ -44,7 +50,7 @@
 	&:not(:last-child){
 		padding-bottom: 1em;
 		margin-bottom: 1.25em;
-		border-bottom: 2px solid #129968;
+		border-bottom: 2px dashed #129968;
 	}
 }
 .practice__descr__item__title{
@@ -55,4 +61,116 @@
 .practice__descr__item__text{
 	font-size: 1.125em;
 	line-height: 1.6;
+}
+
+.practice__item{
+	padding-left: 4em;
+	.practice__total{
+		margin-left: 15em;
+		margin-top: -8em;
+	}
+}
+.circle-diagram{
+	width: 17.5em;
+	height: 17.5em;
+	background: var(--red);
+	padding: 5px;
+	border-radius: 50%;
+	transform: translate(-4em, -30%);
+	position: relative;
+	border: 8px solid #fff;
+	overflow: hidden;
+	&::before{
+		content: '';
+		width: 76%;
+		height: 76%;
+		border-radius: 50%;
+		background-color: #fff;
+		position: absolute;
+		left: 12%;
+		top: 12%;
+		z-index: 2;
+	}
+	&::after{
+		content: '';
+		width: 60%;
+		height: 60%;
+		border-radius: 50%;
+		border: 2px solid #b9bbbd;
+		position: absolute;
+		left: calc(20% - 2px);
+		top: calc(20% - 2px);;
+		z-index: 4;
+	}
+	&--inverse{
+		background: var(--green);
+		.sector{
+			background-color: var(--red);
+			transform: rotate(85deg) skewY(130deg);
+		}
+	}
+}
+.circle-diagram-body{
+	height: 100%;
+}
+.sector{
+	background-color: var(--green);
+	height: 50%;
+	width: 50%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform-origin: left;
+	transform-origin: left bottom;
+	transform: rotate(65deg) skewY(180deg);
+	cursor: pointer;
+}
+
+.practice__total{
+	display: inline-block;
+	font-weight: 700;
+	li{
+		font-size: 1.125rem;
+		margin-bottom: 2em;
+		position: relative;
+		padding-left: 1.2em;
+		transition: all .3s;
+		&::before{
+			content: '';
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: currentColor;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: all .3s;
+		}
+		&.active{
+			margin-bottom: 1.5em;
+		}	
+	}
+}
+.js--status-green{
+	transition: all .3s;
+	&.active{
+			font-size: 1.3rem;
+		}
+}
+.js--status-red{
+	transition: all .3s;
+	&.active{
+		font-size: 1.3rem;
+	}
+}
+
+.linear-diagram{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 1em;
+	width: 11em;
+	height: 10px;
+	border-radius: 10px;
+	background:linear-gradient(to right, #007155 70%, #e72831 30%);
 }

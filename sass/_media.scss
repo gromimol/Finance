@@ -27,7 +27,7 @@
 			padding: 0 30px;
 		}
 	}
-	.features__item{
+	.js--tip-link{
 		&.active{
 			.features__descr{
 				opacity: 1;
@@ -447,6 +447,10 @@
 	.lk-online__title{
 		font-size: 24px;
 	}
+	.practice__item .practice__total{
+		margin-top: 0;
+		margin-left: 0;
+	}
 }
 /*920*/ 
 
@@ -735,6 +739,23 @@
 			}
 		}
 	}
+	.circle-diagram{
+		display: none;
+	}
+	.practice__item .practice__total{
+		margin-top: 30px;
+		margin-left: 70px;
+	}
+	.practice__total{
+		li{
+			font-size: 15px;
+			margin-bottom: 1em;
+		}
+	}
+	.linear-diagram{
+		width: 50px;
+		height: 5px;
+	}
 }
 /*767*/ 
 @media(max-width: 568px){
@@ -894,7 +915,14 @@
 			padding: 20px 10px;
 		}
 	}
-	
+	.practice__item .practice__total{
+		margin-left: 0;
+	}
+	.tip-container .tip{
+		padding: 20px;
+		width: 90%;
+		top: 75%;
+	}
 }
 /*568*/ 
 

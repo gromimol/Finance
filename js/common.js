@@ -20,25 +20,29 @@ $(document).ready(function () {
 	});
 
 	// Подсказка
-	$('.features__ico').on('click', function () {
-		$('.features__item').removeClass('active');
-		$(this).closest('.features__item').addClass('active');
+	$('.js--tip-link').on('click', function () {
+		$('.js--tip-link').removeClass('active');
+		$(this).addClass('active');
 	});
 
-	$('.features__item .close').on('click', function () {
-		$(this).closest('.features__list').find('.features__item').removeClass('active');
+	$('.close').on('click', function (e) {
+		e.stopPropagation()
+		$('.js--tip-link').removeClass('active');
 	});
+
 
 	// slider
 	$('.practice-slider').slick({
 		prevArrow: '<span class="prev-arrow arrow"></span>',
-		nextArrow: '<span class="next-arrow arrow"></span>'
+		nextArrow: '<span class="next-arrow arrow"></span>',
+		infinite: false
 	});
 
 	$('.faq-slider').slick({
 		prevArrow: '<span class="prev-arrow arrow"></span>',
 		nextArrow: '<span class="next-arrow arrow"></span>',
-		adaptiveHeight: true
+		adaptiveHeight: true,
+		infinite: false
 	});
 
 	$('.status__slider').slick({
@@ -137,6 +141,38 @@ $(document).ready(function () {
 		parent.find('input[type=hidden]').attr('value', $(this).attr('data-value') );
 	});
 
+	// Diagram. Hover effect
+	 $('.sector').hover(function () {
+	 	$('.js--status-green').addClass('active');
+	 },function () {
+	 	$('.js--status-green').removeClass('active');
+	 });
 
+	 $('.circle-diagram-body').hover(function () {
+	 	$('.js--status-red').addClass('active');
+	 },function () {
+	 	$('.js--status-red').removeClass('active');
+	 });
+
+	 $('.circle-diagram--inverse .sector').hover(function (){
+	 	$('.js--status-green').removeClass('active');
+	 	$('.js--status-red').addClass('active');
+	 },function () {
+	 	$('.js--status-red').removeClass('active');
+	 });
+
+	 $('.circle-diagram--inverse .circle-diagram-body').hover(function () {
+	 	$('.js--status-red').removeClass('active');
+	 	$('.js--status-green').addClass('active');
+	 },function () {
+	 	$('.js--status-green').removeClass('active');
+	 });
+
+	 // Просто демонстрация работы текста-подсказки в калькуляторе
+	 $('.js--tip-btn').on('click', function (e) {
+	 	e.preventDefault();
+
+	 	$('.tip-container').addClass('active');
+	 })
 
 })

@@ -59,6 +59,32 @@
 		transform: translate(-50%, -50%);
 		z-index: 1;
 	}
+	.features__descr{
+		padding: 0;
+		line-height: 0;
+		top: 100%;
+		img{
+			width: 100%;
+		}
+		.close{
+			position: absolute;
+			top: 20px;
+			left: 50%;
+			margin-bottom: 0;
+			z-index: 2;
+		}
+	}
+}
+
+@media(min-width: 1360px){
+	.features-lk__item{
+		&:hover{
+			.features__descr{
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
 }
 
 .notice{
