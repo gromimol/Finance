@@ -173,6 +173,19 @@ $(document).ready(function () {
 	 	e.preventDefault();
 
 	 	$('.tip-container').addClass('active');
+	 });
+
+	 // Статья. Полный текст
+	 $('.js--article-btn').on('click',function (e) {
+	 	e.preventDefault();
+
+	 	$(this).toggleClass('active').closest('.container').find('.full-article').slideToggle();
+
+	 	if($(this).hasClass('active')){
+	 		$(this).text('Свернуть статью');
+	 	}else{
+	 		$(this).text('Читать полностью');
+	 	}
 	 })
 
 })

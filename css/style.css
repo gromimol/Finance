@@ -1186,7 +1186,7 @@ b {
 .price__total {
   max-width: 845px;
   margin: 0 auto 4.0625rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   text-align: right; }
 
@@ -1297,7 +1297,14 @@ b {
     opacity: 1;
     visibility: visible; }
   .tip-container .tip {
-    width: 70%;
+    width: 80%;
+    min-height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     position: absolute;
     left: 50%;
@@ -1305,7 +1312,7 @@ b {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     background-color: #fff;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 1.6;
     padding: 2.77em 2.3em;
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -1523,6 +1530,13 @@ b {
 
 .help__ico {
   width: 22.5em; }
+
+.full-article {
+  display: none; }
+  .full-article p {
+    font-size: 1.125em;
+    line-height: 1.5;
+    margin-bottom: 1.5em; }
 
 /*recomend*/
 .recomend {
@@ -3204,7 +3218,14 @@ b {
 
   .linear-diagram {
     width: 50px;
-    height: 5px; } }
+    height: 5px; }
+
+  .tip-container .tip {
+    min-height: auto;
+    font-size: 18px; }
+
+  .full-article p {
+    font-size: 16px; } }
 /*767*/
 @media (max-width: 568px) {
   .warranty__right__title {

@@ -756,6 +756,13 @@
 		width: 50px;
 		height: 5px;
 	}
+	.tip-container .tip{
+		min-height: auto;
+		font-size: 18px;
+	}
+	.full-article p{
+		font-size: 16px;
+	}
 }
 /*767*/ 
 @media(max-width: 568px){
