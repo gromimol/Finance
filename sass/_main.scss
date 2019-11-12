@@ -156,9 +156,32 @@ a{
 	background-repeat: no-repeat;
 	background-position: center;
 	cursor: pointer;
+	position: relative;
 	transition: all .3s;
 	&:hover{
 		border-color: #231f20;
+	}
+	&::after{
+		content: '';
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		position: absolute;
+		left: -1px;
+		top: -1px;
+		border-right: 4px solid #e72831;
+		animation: spin ease-in 5s infinite;
+		
+	}
+	&.prev-arrow{
+		&::after{
+			animation-direction: reverse
+		}
+	}
+}
+.arrow.slick-disabled{
+	&::after{
+		display: none;
 	}
 }
 
@@ -195,7 +218,22 @@ a{
 /* фф (свойство больше не работает, других способов тоже нет)*/
 .element { overflow: -moz-scrollbars-none; }
 
+@keyframes spin {
+	0% { transform: rotate(0deg) scale(1);opacity: 0;}
+	90% { transform: rotate(1080deg) scale(1);opacity: .8; }
+	100% { transform: rotate(1280deg) scale(1); opacity: 0; }
+}
 
+@keyframes color{
+	0%,100%{
+		color: var(--green);
+	}
+	25%,
+	75%{
+		color: var(--red);
+	}
+
+}
 
 
 

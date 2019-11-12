@@ -1,6 +1,20 @@
 /*offer*/ 
 .offer{
 	padding: 5em 0 10em;
+	position: relative;
+	&::before{
+		content: '';
+		width: 21.875em;
+		height: 100%;
+		background: transparent url(../images/bg/decor.png) 0 100% no-repeat;
+		background-size: contain;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transform: rotate(180deg);
+		z-index: -1;
+		opacity: .08;
+	}
 	.title{
 		margin-bottom: 4em;
 	}

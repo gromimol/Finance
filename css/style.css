@@ -260,10 +260,28 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  position: relative;
   -webkit-transition: all .3s;
   transition: all .3s; }
   .arrow:hover {
     border-color: #231f20; }
+  .arrow::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    border-right: 4px solid #e72831;
+    -webkit-animation: spin ease-in 5s infinite;
+            animation: spin ease-in 5s infinite; }
+  .arrow.prev-arrow::after {
+    -webkit-animation-direction: reverse;
+            animation-direction: reverse; }
+
+.arrow.slick-disabled::after {
+  display: none; }
 
 .animation-title {
   position: relative;
@@ -284,6 +302,45 @@ a {
 .element {
   overflow: -moz-scrollbars-none; }
 
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+    opacity: 0; }
+  90% {
+    -webkit-transform: rotate(1080deg) scale(1);
+            transform: rotate(1080deg) scale(1);
+    opacity: .8; }
+  100% {
+    -webkit-transform: rotate(1280deg) scale(1);
+            transform: rotate(1280deg) scale(1);
+    opacity: 0; } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+    opacity: 0; }
+  90% {
+    -webkit-transform: rotate(1080deg) scale(1);
+            transform: rotate(1080deg) scale(1);
+    opacity: .8; }
+  100% {
+    -webkit-transform: rotate(1280deg) scale(1);
+            transform: rotate(1280deg) scale(1);
+    opacity: 0; } }
+@-webkit-keyframes color {
+  0%,100% {
+    color: var(--green); }
+  25%,
+	75% {
+    color: var(--red); } }
+@keyframes color {
+  0%,100% {
+    color: var(--green); }
+  25%,
+	75% {
+    color: var(--red); } }
 /* Slider */
 .slick-slider {
   position: relative;
@@ -1157,7 +1214,7 @@ a {
   -webkit-transition: all .3s;
   transition: all .3s; }
   .js--status-red.active {
-    font-size: 1.3rem; }
+    font-size: 1.4rem; }
 
 .linear-diagram {
   display: inline-block;
@@ -1189,6 +1246,10 @@ b {
   font-size: 1.25rem;
   font-weight: 700;
   text-align: right; }
+
+.important-notice {
+  -webkit-animation: color infinite 2s ease-in;
+          animation: color infinite 2s ease-in; }
 
 .price__list {
   border: 5px solid var(--green);
@@ -1319,12 +1380,14 @@ b {
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     z-index: 2; }
-    .tip-container .tip a:hover {
-      text-decoration: underline; }
+    .tip-container .tip a {
+      font-weight: 700; }
+      .tip-container .tip a:hover {
+        text-decoration: underline; }
 
 .calculator__item__title {
   font-size: 18px;
-  margin-bottom: 1.2em;
+  margin-bottom: 1em;
   line-height: 1.3; }
 
 .calculator__field {
@@ -1394,7 +1457,7 @@ b {
   border: 10px solid var(--green);
   border-radius: 15px;
   background-color: #fff;
-  padding: 3em;
+  padding: 2em;
   position: relative; }
   .calculator__block::after {
     content: '';
@@ -1412,7 +1475,7 @@ b {
   margin-bottom: 20px; }
 
 .calculator__item__row .checkbox {
-  margin-bottom: 20px; }
+  margin-bottom: 15px; }
   .calculator__item__row .checkbox:not(:last-child) {
     margin-right: 45px; }
 
@@ -1769,7 +1832,21 @@ b {
 
 /*offer*/
 .offer {
-  padding: 5em 0 10em; }
+  padding: 5em 0 10em;
+  position: relative; }
+  .offer::before {
+    content: '';
+    width: 21.875em;
+    height: 100%;
+    background: transparent url(../images/bg/decor.png) 0 100% no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    z-index: -1;
+    opacity: .08; }
   .offer .title {
     margin-bottom: 4em; }
 
@@ -2480,10 +2557,26 @@ b {
 /*1700*/
 @media (max-width: 1500px) {
   .lk-manager__content {
-    max-width: 75%; } }
+    max-width: 75%; }
+
+  .container {
+    padding: 0 50px; }
+
+  .calculator__block {
+    padding: 1.8em; }
+
+  .calculator__item__title {
+    margin-bottom: .6em; }
+
+  .calculator__item__row .checkbox,
+  .calculator__right .calculator__item:not(:last-child) {
+    margin-bottom: 10px; } }
 @media (max-width: 1360px) {
   html {
     font-size: 1.1vw; }
+
+  .container {
+    padding: 0 20px; }
 
   .lk-manager__content {
     max-width: 100%; }

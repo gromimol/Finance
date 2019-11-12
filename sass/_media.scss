@@ -10,10 +10,26 @@
 	.lk-manager__content{
 		max-width: 75%;
 	}
+	.container{
+		padding: 0 50px;
+	}
+	.calculator__block{
+		padding: 1.8em;
+	}
+	.calculator__item__title{
+		margin-bottom: .6em;
+	}
+	.calculator__item__row .checkbox,
+	.calculator__right .calculator__item:not(:last-child){
+		margin-bottom: 10px;
+	}
 }
 @media(max-width: 1360px){
 	html{
 		font-size: 1.1vw;
+	}
+	.container{
+		padding: 0 20px;
 	}
 	.lk-manager__content{
 		max-width: 100%;

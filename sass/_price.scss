@@ -18,6 +18,10 @@ b{
 	font-size: 1.25rem;
 	font-weight: 700;
 	text-align: right;
+	
+}
+.important-notice{
+	animation: color infinite 2s ease-in;
 }
 .price__list{
 	border: 5px solid var(--green);
