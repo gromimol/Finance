@@ -23,6 +23,20 @@
 	.calculator__right .calculator__item:not(:last-child){
 		margin-bottom: 10px;
 	}
+	.faq__notice{
+		border-width: 9px;
+	}
+	.lk-page.flex{
+		.container{
+			height: 100%;
+		}
+	}
+	.lk-page .logo-container{
+		padding-top: 20px;
+	}
+	.registration-block .btn-container{
+		padding-bottom: 30px;
+	}
 }
 @media(max-width: 1360px){
 	html{
